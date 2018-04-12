@@ -1,0 +1,17 @@
+com.omrup.cell.tracker
+com.aappstech.cellphonetracker
+com.prime.studio.apps.gps.personal.tracker
+com.tiket.to.you
+com.astroframe.seoulbus
+com.trackinglabs.traintracker
+com.trackinglabs.poitracker
+com.trackinglabs.trackmyflight
+com.trackinglabs.marinetracker
+maratische.android.bikeincity
+com.esocialllc.gl
+com.ubercab
+ch.simonmorgenthaler.fuellog
+am.ggtaxi.main.ggdriver
+ru.yandex.taxi
+taxi.u.client
+ninja.sesame.ridefair

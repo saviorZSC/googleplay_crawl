@@ -1,0 +1,9 @@
+com.houzz.app
+com.closetsketcher
+com.constructionsolutions.ceilingdesign
+com.yandex.mobile.realty
+com.move.realtor
+com.redfin.android
+com.move.rentals
+com.zumper.rentals
+com.philips.hueswitcher.quickstart
