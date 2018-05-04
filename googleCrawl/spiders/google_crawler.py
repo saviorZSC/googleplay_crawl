@@ -6,12 +6,9 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.linkextractors import LinkExtractor
 from googleCrawl.items import GoogleItem
-from language_linkextractor import LanguageLinkExtractor
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.remote.remote_connection import LOGGER
+from language_linkextractor import LanguageLinkExtractor
+
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 import urlparse
@@ -35,12 +32,16 @@ class GoogleSpider(CrawlSpider):
     #     ] #
 
     def __init__(self):
-        firefox_profile = webdriver.FirefoxProfile()
-        firefox_profile.set_preference("permissions.default.image",2)
-        firefox_profile.set_preference("int1.accept_language", "en-GB")
-        firefox_profile.update_preferences()
-        self.driver = webdriver.Firefox(firefox_profile)
-
+        # firefox_profile = webdriver.FirefoxProfile()
+        # firefox_profile.set_preference("permissions.default.image",2)
+        # firefox_profile.set_preference("int1.accept_language", "en-GB")
+        # firefox_profile.update_preferences()
+        # self.driver = webdriver.Firefox(firefox_profile)
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('lang=en-GB')
+        prefs = {"profile.managed_default_content_settings.images":2, "int1.accept_language": "en-GB"}
+        chrome_options.add_experimental_option('prefs',prefs)
+        self.driver = webdriver.Chrome(chrome_options = chrome_options)
 
     def start_requests(self):
 
@@ -53,6 +54,7 @@ class GoogleSpider(CrawlSpider):
 
         url = response.url
         self.driver.get(url)
+
         url = urlparse.urlparse(url).query.split('&')[0].split('=')[-1]
         #分类
         categories = response.xpath('//*[@id="fcxH9b"]/div[4]/c-wiz/div/div[2]/div/div[1]/div/c-wiz[1]/c-wiz[1]/div/div[2]/div/div[1]/div/div[1]/div[1]/span[2]/a/text()').extract()[0]
@@ -65,15 +67,15 @@ class GoogleSpider(CrawlSpider):
         #评分
         rating = dict()
         rating['overall'] = response.xpath('//*[@id="fcxH9b"]//div[@class="BHMmbe"]/text()').extract()[0]
-        rating['five_star'] = response.xpath('//*[@id="fcxH9b"]//div[@class="mMF0fd"][1]/span[@class="UfW5d"]/text()').extract()[0]
-        rating['four_star'] = response.xpath('//*[@id="fcxH9b"]//div[@class="mMF0fd"][2]/span[@class="UfW5d"]/text()').extract()[0]
-        rating['three_star'] = response.xpath('//*[@id="fcxH9b"]//div[@class="mMF0fd"][3]/span[@class="UfW5d"]/text()').extract()[0]
-        rating['two_star'] = response.xpath('//*[@id="fcxH9b"]//div[@class="mMF0fd"][4]/span[@class="UfW5d"]/text()').extract()[0]
-        rating['one_star'] = response.xpath('//*[@id="fcxH9b"]//div[@class="mMF0fd"][5]/span[@class="UfW5d"]/text()').extract()[0]
-        rating["total_rating"] = response.xpath('//*[@id="fcxH9b"]//span[@class="EymY4b"]/span[2]/text()').extract()[0]
+        rating['five_star'] = response.xpath('//span[@title]//@title').extract()[0]
+        rating['four_star'] = response.xpath('//span[@title]//@title').extract()[1]
+        rating['three_star'] = response.xpath('//span[@title]//@title').extract()[2]
+        rating['two_star'] = response.xpath('//span[@title]//@title').extract()[3]
+        rating['one_star'] = response.xpath('//span[@title]//@title').extract()[4]
+        rating["total_rating"] = response.xpath('//span[@aria-label]/text()').extract()[0]
         # pprint(rating)
 
-        #获取权限
+        # 获取权限
         permission_set = set()
         while True:
             try:
@@ -83,14 +85,12 @@ class GoogleSpider(CrawlSpider):
                 next_list = next.find_elements_by_xpath('//div[@class="fnLizd"]//li')
                 print(len(next_list))
                 for element in next_list:
-                    print(element.text)
+                    # print(element.text)
                     permission_set.add(element.text)
                 break
             except NoSuchElementException:
                 return
         permission = list(permission_set)
-
-
 
 
 
@@ -112,6 +112,9 @@ class GoogleSpider(CrawlSpider):
         item['dev_web'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[1]/a/@href').extract()[0]
         item['dev_email'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[2]/a/text()').extract()[0]
         item['dev_name'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div/text()').extract()[0]
+        item["privacy_police"] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[3]/a/@href').extract()[0]
+
+
 
         item["authority"]=""
         if len(permission):

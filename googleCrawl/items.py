@@ -37,6 +37,7 @@ class GoogleItem(scrapy.Item):
     authority = scrapy.Field()
     review = scrapy.Field()
 
+    privacy_police = scrapy.Field()
 
 
     # dev_url = scrapy.Field()

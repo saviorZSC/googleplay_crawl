@@ -9,6 +9,7 @@
 class GooglecrawlPipeline(object):
     # print 11111111111
     def process_item(self, item, spider):
+        
         # fp = open('F:\PROJECT\googleCrawl\googleCrawl\package_'+item['categories']+'.txt', 'a+')
         # fp.write(item['url'] + '\n')
         return item

@@ -1,7 +1,17 @@
-# # file = open("package_FINANCE.txt", "w")
-# # file.write("hello")
-# import urlparse
-# url = "https://play.google.com/store/apps/details?id=gifs.funnygifsforwhatsapp&hl=en"
-# app_name = urlparse.urlparse(url).query.split('&')[0].split('=')[-1]
-# print app_name
+# # # file = open("package_FINANCE.txt", "w")
+# # # file.write("hello")
+# # import urlparse
+# # url = "https://play.google.com/store/apps/details?id=gifs.funnygifsforwhatsapp&hl=en"
+# # app_name = urlparse.urlparse(url).query.split('&')[0].split('=')[-1]
+# # print app_name
+# #
+# from selenium import webdriver
+#
+# chrome_options = webdriver.ChromeOptions()
+# chrome_options.add_argument('lang=en-GB')
+# prefs = {"profile.managed_default_content_settings.images":2, "int1.accept_language": "en-GB"}
+# chrome_options.add_experimental_option('prefs',prefs)
+# driver = webdriver.Chrome(chrome_options = chrome_options)
+# driver.get('https://play.google.com/store/apps')
+#
 #
