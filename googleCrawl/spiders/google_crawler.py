@@ -189,7 +189,7 @@ class GoogleSpider(CrawlSpider):
         else:
             item['iap'] = ""
 
-        item['dev_web'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[1]/a/@href').extract()
+        item['dev_web'] = response.xpath('//div[contains(text(),"Developer")]/..//a/@href').extract()
         if(len(item['dev_web']) > 0):
             item['dev_web'] = item['dev_web'][0]
         else:
@@ -198,16 +198,16 @@ class GoogleSpider(CrawlSpider):
 
 
 
-        item['dev_email'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[2]/a/text()').extract()
-        if(len(item['dev_email']) > 0):
-            item['dev_email'] = item['dev_email'][0]
+        item['dev_email'] = response.xpath('//div[contains(text(),"Developer")]/..//a/@href').extract()
+        if(len(item['dev_email']) > 2):
+            item['dev_email'] = item['dev_email'][1]
         else:
             item['dev_email'] = ""
 
 
 
 
-        item['dev_name'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div/text()').extract()
+        item['dev_name'] = response.xpath('//div[contains(text(),"Developer")]/..//div/text()').extract()
         if(len(item['dev_name']) > 0):
             item['dev_name'] = item['dev_name'][0]
         else:
@@ -216,7 +216,7 @@ class GoogleSpider(CrawlSpider):
 
 
 
-        item["privacy_policy"] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[3]/a/@href').extract()
+        item["privacy_policy"] = response.xpath('//div[contains(text(),"Developer")]/..//a[contains(text(),"Privacy Policy")]/@href').extract()
         if(len(item["privacy_policy"]) > 0):
             item["privacy_policy"] = item["privacy_policy"][0]
         else:

@@ -43,13 +43,13 @@ class GooglecrawlPipeline(object):
 		sql="insert into gplay_app(" \
             "`url_id`, `title`, `categories`, `description`, `rating`, `update_date`, `size`, `installs`," \
 			"`current_version`, `requires_android`, `content_rating`, `interactive_elements`, `permissions`," \
-			"`offered_by`, `developer_web`, `developer_email`, `developer_name`, `privacy_policy`, `update`) " \
-			"values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+			"`offered_by`, `developer_web`, `developer_email`, `developer_name`, `privacy_policy`, `update`, `iap`) " \
+			"values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 		params=[item["url"], item["title"], item['categories'], item['description'],
 				item['rating'], item['update_date'], item['size'], item['download_num'],
 				item['cur_version'], item['require'], item['level'], item['interaction'],
 				item['authority'], item['developer'], item['dev_web'], item['dev_email'],
-				item['dev_name'], item['privacy_policy'],item['update']]
+				item['dev_name'], item['privacy_policy'],item['update'], item['iap']]
 		tx.execute(sql,params)
 
 	def _handle_error(self, failue, item, spider):
