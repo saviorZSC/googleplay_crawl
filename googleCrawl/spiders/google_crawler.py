@@ -47,13 +47,15 @@ class GoogleSpider(CrawlSpider):
     def start_requests(self):
         # file = open("F:\Documents\Project\googleplay_crawl\set\gplay_url.txt", "rb")
         #获取url并且去除“”
-        url = linecache.getline(r'F:\Documents\Project\googleplay_crawl\set\gplay_url.txt',10)
-        url = list(url)
-        url[-1] = ''      #\n
-        url[-2] = ''      #"
-        url[0] = ''       #"
-        url = ''.join(url)
-        yield scrapy.Request(url="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe", callback=self.parse_app)
+        # url = linecache.getline(r'F:\Documents\Project\googleplay_crawl\set\gplay_url.txt',10)
+        urls = []
+        with open('F:\Documents\Project\googleplay_crawl\set\package_url.txt') as rfile:
+            for f in rfile:
+                url = 'https://play.google.com/store/apps/details?id='+ f.strip()
+                urls.append(url)
+
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse_app)
 
 
     def parse_app(self, response):
@@ -184,10 +186,10 @@ class GoogleSpider(CrawlSpider):
             item['developer'] = ""
 
         item['iap'] = response.xpath('//div[contains(text(),"In-app Products")]/..//span/text()').extract()
-        if(len(item['developer']) > 0):
+        if(len(item['iap']) > 0):
             item['iap'] = item['iap'][0]
         else:
-            item['iap'] = ""
+            item['iap'] = "0"
 
         item['dev_web'] = response.xpath('//div[contains(text(),"Developer")]/..//a/@href').extract()
         if(len(item['dev_web']) > 0):
@@ -209,7 +211,8 @@ class GoogleSpider(CrawlSpider):
 
         item['dev_name'] = response.xpath('//div[contains(text(),"Developer")]/..//div/text()').extract()
         if(len(item['dev_name']) > 0):
-            item['dev_name'] = item['dev_name'][0]
+            item['dev_name'][0] = ""
+            item['dev_name'] = ''.join(item['dev_name'])
         else:
             item['dev_name'] = ""
 
