@@ -22,4 +22,4 @@ class LanguageLinkExtractor(LxmlLinkExtractor):
         for x in links:
             x.url = LanguageLinkExtractor.addParams(x.url)
         # links = super(LxmlLinkExtractor, self).extract_links(response);
-        return links;
+        return links

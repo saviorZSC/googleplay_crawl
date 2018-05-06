@@ -67,6 +67,12 @@ ITEM_PIPELINES = {
    'googleCrawl.pipelines.GooglecrawlPipeline': 300,
 }
 
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'gplay'
+MYSQL_USER = 'root'
+MYSQL_PASSWD = ''
+
+MYSQL_PORT = 3306
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

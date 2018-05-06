@@ -1,14 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py" line="34" />
-    <bookmark url="file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py" line="38" />
+    <bookmark url="file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py" line="35" />
+    <bookmark url="file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py" line="39" />
+    <bookmark url="file://$PROJECT_DIR$/googleCrawl/pipelines.py" line="12" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ddb4c3b-7cc1-4185-8c79-78df74e05a1a" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/googleCrawl/gplay_url.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/items.py" afterPath="$PROJECT_DIR$/googleCrawl/items.py" />
       <change beforePath="$PROJECT_DIR$/googleCrawl/pipelines.py" afterPath="$PROJECT_DIR$/googleCrawl/pipelines.py" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Action.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Adventure.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Arcade.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Art &amp; Design.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Auto &amp; Vehicles.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Beauty.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Board.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Books &amp; Reference.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Business.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Card.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Casino.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Casual.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Comics.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Communication.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Dating.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Education.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Educational.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Entertainment.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Events.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Finance.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Food &amp; Drink.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Health &amp; Fitness.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_House &amp; Home.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Libraries &amp; Demo.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Lifestyle.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Maps &amp; Navigation.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Medical.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Music &amp; Audio.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Music.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_News &amp; Magazines.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Parenting.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Personalization.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Photography.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Productivity.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Puzzle.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Racing.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Role Playing.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Shopping.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Simulation.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Social.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Sports.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Strategy.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Tools.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Travel &amp; Local.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Trivia.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Video Players &amp; Editors.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Weather.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Word.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_Εκπαίδευση.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set/package_パズル.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Action.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Adventure.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Arcade.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Art &amp; Design.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Auto &amp; Vehicles.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Beauty.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Board.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Books &amp; Reference.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Business.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Card.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Casino.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Casual.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Comics.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Communication.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Dating.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Education.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Educational.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Entertainment.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Events.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Finance.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Food &amp; Drink.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Health &amp; Fitness.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_House &amp; Home.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Libraries &amp; Demo.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Lifestyle.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Maps &amp; Navigation.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Medical.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Music &amp; Audio.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Music.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_News &amp; Magazines.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Parenting.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Personalization.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Photography.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Productivity.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Puzzle.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Racing.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Role Playing.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Shopping.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Simulation.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Social.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Sports.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Strategy.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Tools.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Travel &amp; Local.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Trivia.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Video Players &amp; Editors.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Weather.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/set_2/package_Word.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/settings.py" afterPath="$PROJECT_DIR$/googleCrawl/settings.py" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py" afterPath="$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py" />
+      <change beforePath="$PROJECT_DIR$/googleCrawl/spiders/language_linkextractor.py" afterPath="$PROJECT_DIR$/googleCrawl/spiders/language_linkextractor.py" />
+      <change beforePath="$PROJECT_DIR$/gplay_url" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/package_FINANCE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/package_FINANCE.txt" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +126,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleCrawl/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="360">
+              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <element signature="e#194#208#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="engine.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/scrapy/core/engine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,18 +163,18 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleCrawl/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1608">
-              <caret line="67" column="1" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
+            <state relative-caret-position="333">
+              <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="google_crawler.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="google_crawler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3048">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state relative-caret-position="-17">
+              <caret line="188" column="13" lean-forward="true" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
               <folding>
                 <element signature="e#26#39#0" expanded="true" />
               </folding>
@@ -63,21 +182,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googleCrawl/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="461">
+              <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -98,24 +207,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/googleCrawl/spiders/language_linkextractor.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/googleCrawl/settings.py" />
         <option value="$PROJECT_DIR$/googleCrawl/spiders/test.py" />
+        <option value="$PROJECT_DIR$/googleCrawl/settings.py" />
+        <option value="$PROJECT_DIR$/googleCrawl/spiders/language_linkextractor.py" />
+        <option value="$PROJECT_DIR$/googleCrawl/pipelines.py" />
+        <option value="$USER_HOME$/AppData/Local/Temp/BNZ.5aef55fc6061fb1/gplay_spider.py" />
         <option value="$PROJECT_DIR$/googleCrawl/items.py" />
         <option value="$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py" />
-        <option value="$PROJECT_DIR$/googleCrawl/pipelines.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="31" />
-    <option name="y" value="152" />
-    <option name="width" value="1094" />
-    <option name="height" value="924" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -132,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,10 +265,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\guore\PycharmProjects\googleplay_crawl\googleCrawl" />
+      <recent name="C:\Users\guore\PycharmProjects\googleplay_crawl\googleCrawl\spiders" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -230,18 +347,18 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10359408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21088795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50683373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.02164009" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -250,123 +367,42 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="hello" />
+    <option name="LAST_COMMIT_MESSAGE" value="hello" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py</url>
-          <line>125</line>
+          <line>240</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py</url>
-          <line>96</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/googleCrawl/pipelines.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="categories" />
+        <watch expression="url" language="Python" />
       </configuration>
     </watches-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>url</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python27/Lib/importlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/test.py" />
-    <entry file="file://$PROJECT_DIR$/googleCrawl/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1608">
-          <caret line="67" column="1" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/importlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/test.py" />
-    <entry file="file://$PROJECT_DIR$/googleCrawl/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1608">
-          <caret line="67" column="1" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" column="153" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="153" />
-          <folding>
-            <element signature="e#26#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="70" lean-forward="false" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -400,7 +436,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -435,7 +473,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="23" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="12" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -480,7 +520,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -523,7 +565,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -597,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/language_linkextractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/importlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -618,18 +655,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1608">
-          <caret line="67" column="1" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleCrawl/set/package_Health &amp; Fitness.txt" />
+    <entry file="file://$PROJECT_DIR$/googleCrawl/set/package_Word.txt" />
+    <entry file="file://$PROJECT_DIR$/googleCrawl/set/package_Εκπαίδευση.txt" />
+    <entry file="file://$PROJECT_DIR$/googleCrawl/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/language_linkextractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5aef3da15a6f3dc/gplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/gplay_url.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleCrawl/gplay_url.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5aef491a5d3ca7f/gplay_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/scrapy/core/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleCrawl/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleCrawl/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5aef55fc6061fb1/gplay_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="157" column="125" lean-forward="false" selection-start-line="157" selection-start-column="35" selection-end-line="157" selection-end-column="125" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5aef55ed605e567/gplay_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/parsel/selector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="123" column="8" lean-forward="false" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5aef56ad608d079/gplay_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="167" column="133" lean-forward="false" selection-start-line="167" selection-start-column="75" selection-end-line="167" selection-end-column="133" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googleCrawl/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -644,29 +794,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googleCrawl/spiders/google_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3048">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        <state relative-caret-position="-17">
+          <caret line="188" column="13" lean-forward="true" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
           <folding>
             <element signature="e#26#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleCrawl/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>

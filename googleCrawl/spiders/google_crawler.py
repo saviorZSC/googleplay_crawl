@@ -14,6 +14,7 @@ from selenium.common.exceptions import TimeoutException
 import urlparse
 import sys
 from pprint import pprint
+import linecache
 
 class GoogleSpider(CrawlSpider):
     reload(sys)
@@ -44,8 +45,15 @@ class GoogleSpider(CrawlSpider):
         self.driver = webdriver.Chrome(chrome_options = chrome_options)
 
     def start_requests(self):
-
-        yield scrapy.Request(url="https://play.google.com/store/apps/details?id=com.google.android.gm", callback=self.parse_app)
+        # file = open("F:\Documents\Project\googleplay_crawl\set\gplay_url.txt", "rb")
+        #获取url并且去除“”
+        url = linecache.getline(r'F:\Documents\Project\googleplay_crawl\set\gplay_url.txt',10)
+        url = list(url)
+        url[-1] = ''      #\n
+        url[-2] = ''      #"
+        url[0] = ''       #"
+        url = ''.join(url)
+        yield scrapy.Request(url="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe", callback=self.parse_app)
 
 
     def parse_app(self, response):
@@ -63,16 +71,39 @@ class GoogleSpider(CrawlSpider):
         if len(desc):
             if str(desc[0].encode('utf-8')) == 'Translate':
                 desc.pop(0)
-        desc = ''.join(desc)
+        desc = '`'.join(desc)
         #评分
         rating = dict()
-        rating['overall'] = response.xpath('//*[@id="fcxH9b"]//div[@class="BHMmbe"]/text()').extract()[0]
-        rating['five_star'] = response.xpath('//span[@title]//@title').extract()[0]
-        rating['four_star'] = response.xpath('//span[@title]//@title').extract()[1]
-        rating['three_star'] = response.xpath('//span[@title]//@title').extract()[2]
-        rating['two_star'] = response.xpath('//span[@title]//@title').extract()[3]
-        rating['one_star'] = response.xpath('//span[@title]//@title').extract()[4]
-        rating["total_rating"] = response.xpath('//span[@aria-label]/text()').extract()[0]
+        rating['overall'] = response.xpath('//*[@id="fcxH9b"]//div[@class="BHMmbe"]/text()').extract()
+        if(len(rating['overall']) > 0):
+            rating['overall'] = rating['overall'][0]
+        else:
+            rating['overall'] = "0"
+        ratings = response.xpath('//span[@title]//@title').extract()
+        if(len(ratings) > 0):
+            rating['five_star'] = ratings[0]
+        else:
+            rating['five_star'] = "0"
+        if(len(ratings) > 1):
+            rating['four_star'] = ratings[1]
+        else:
+            rating['four_star'] = "0"
+        if(len(ratings) > 2):
+            rating['three_star'] = ratings[2]
+        else:
+            rating['three_star'] = "0"
+        if(len(ratings) > 3):
+            rating['two_star'] = ratings[3]
+        else:
+            rating['two_star'] = "0"
+        if(len(ratings) > 4):
+            rating['one_star'] = ratings[4]
+            rating['one_star'] = "0"
+        rating["total_rating"] = response.xpath('//span[@aria-label]/text()').extract()
+        if(len(rating['total_rating'])>0):
+            rating['total_rating'] = rating['total_rating'][0]
+        else:
+            rating['total_rating'] = "0"
         # pprint(rating)
 
         # 获取权限
@@ -83,7 +114,7 @@ class GoogleSpider(CrawlSpider):
                 next.click()
                 time.sleep(3)
                 next_list = next.find_elements_by_xpath('//div[@class="fnLizd"]//li')
-                print(len(next_list))
+                # print(len(next_list))
                 for element in next_list:
                     # print(element.text)
                     permission_set.add(element.text)
@@ -101,18 +132,95 @@ class GoogleSpider(CrawlSpider):
         item['description'] = desc
         item["rating"]="one_star:"+rating["one_star"]+";"+"two_star:"+rating["two_star"]+";"+"three_star:"+rating["three_star"]+";"+"four_star:"+rating["four_star"]+";"+"five_star:"+rating["five_star"]+";"+"total_rating:"+rating["total_rating"]+";"+"overall:"+rating["overall"]
 
-        item['update_date'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][1]//span/text()').extract()[0]
-        item['size'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][2]//span/text()').extract()[0]
-        item['download_num'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][3]//span/text()').extract()[0]
-        item['cur_version'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][4]//span/text()').extract()[0]
-        item['require'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][5]//span/text()').extract()[0]
-        item['level'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][6]//span/div/text()').extract()[0]
-        item['interaction'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][7]//span/text()').extract()[0]
-        item['developer'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][8]//span/text()').extract()[0]
-        item['dev_web'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[1]/a/@href').extract()[0]
-        item['dev_email'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[2]/a/text()').extract()[0]
-        item['dev_name'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div/text()').extract()[0]
-        item["privacy_police"] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[3]/a/@href').extract()[0]
+        item['update_date'] = response.xpath('//div[contains(text(),"Updated")]/..//span/text()').extract()
+        if(len(item['update_date']) > 0):
+            item['update_date'] = item['update_date'][0]
+        else:
+            item['update_date'] = ""
+
+        item['size'] = response.xpath('//div[contains(text(),"Size")]/..//span/text()').extract()
+        if(len(item['size']) > 0):
+            item['size'] = item['size'][0]
+        else:
+            item['size'] = ""
+
+
+        item['download_num'] = response.xpath('//div[contains(text(),"Installs")]/..//span/text()').extract()
+        if(len(item['download_num']) > 0):
+            item['download_num'] = item['download_num'][0]
+        else:
+            item['download_num'] = ""
+
+        item['cur_version'] = response.xpath('//div[contains(text(),"Current Version")]/..//span/text()').extract()
+        if(len(item['cur_version']) > 0):
+            item['cur_version'] = item['cur_version'][0]
+        else:
+            item['cur_version'] = ""
+
+        item['require'] = response.xpath('//div[contains(text(),"Requires Android")]/..//span/text()').extract()
+        if(len(item['require']) > 0):
+            item['require'] = item['require'][0]
+        else:
+            item['require'] = ""
+
+
+        item['level'] = response.xpath('//div[contains(text(),"Content Rating")]/../span//div/text()').extract()
+        if(len(item['level']) > 0):
+            item['level'] = '`'.join(item['level'])
+        else:
+            item['level'] = ""
+
+
+        item['interaction'] = response.xpath('//div[contains(text(),"Interactive Elements")]/..//span/text()').extract()
+        if(len(item['interaction']) > 0):
+            item['interaction'] = item['interaction'][0]
+        else:
+            item['interaction'] = ""
+
+        item['developer'] = response.xpath('//div[contains(text(),"Offered By")]/..//span/text()').extract()
+        if(len(item['developer']) > 0):
+            item['developer'] = item['developer'][0]
+        else:
+            item['developer'] = ""
+
+        item['iap'] = response.xpath('//div[contains(text(),"In-app Products")]/..//span/text()').extract()
+        if(len(item['developer']) > 0):
+            item['iap'] = item['iap'][0]
+        else:
+            item['iap'] = ""
+
+        item['dev_web'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[1]/a/@href').extract()
+        if(len(item['dev_web']) > 0):
+            item['dev_web'] = item['dev_web'][0]
+        else:
+            item['dev_web'] = ""
+
+
+
+
+        item['dev_email'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[2]/a/text()').extract()
+        if(len(item['dev_email']) > 0):
+            item['dev_email'] = item['dev_email'][0]
+        else:
+            item['dev_email'] = ""
+
+
+
+
+        item['dev_name'] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div/text()').extract()
+        if(len(item['dev_name']) > 0):
+            item['dev_name'] = item['dev_name'][0]
+        else:
+            item['dev_name'] = ""
+
+
+
+
+        item["privacy_policy"] = response.xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"][9]//span/div[3]/a/@href').extract()
+        if(len(item["privacy_policy"]) > 0):
+            item["privacy_policy"] = item["privacy_policy"][0]
+        else:
+            item["privacy_policy"] = ""
 
 
 
@@ -121,8 +229,19 @@ class GoogleSpider(CrawlSpider):
             for per in permission:
                 item["authority"]=item["authority"]+per+";"
 
+        update = response.xpath('//*[@id="fcxH9b"]//content/text()').extract()
+        if len(update):
+            if str(update[0].encode('utf-8')) == 'Translate':
+                update.pop(0)
+        update = '`'.join(update)
+        item['update'] = update
+
         # with open('F:\PROJECT\googleCrawl\googleCrawl\package_FINANCE.txt', 'w+') as f:
         #     f.write(url + '\n')
         yield item
+
+
+
+
 
 
