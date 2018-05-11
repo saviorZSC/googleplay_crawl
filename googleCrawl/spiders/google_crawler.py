@@ -2,19 +2,18 @@
 import scrapy
 import time
 import urlparse
+import sys
+import MySQLdb
+import MySQLdb.cursors
 from scrapy.spiders import CrawlSpider, Rule
-from scrapy.linkextractors.sgml import SgmlLinkExtractor
-from scrapy.linkextractors import LinkExtractor
 from googleCrawl.items import GoogleItem
 from selenium import webdriver
-from language_linkextractor import LanguageLinkExtractor
+
 
 from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import TimeoutException
-import urlparse
-import sys
-from pprint import pprint
-import linecache
+
+
+
 
 class GoogleSpider(CrawlSpider):
     reload(sys)
@@ -44,18 +43,28 @@ class GoogleSpider(CrawlSpider):
         chrome_options.add_experimental_option('prefs',prefs)
         self.driver = webdriver.Chrome(chrome_options = chrome_options)
 
+
     def start_requests(self):
         # file = open("F:\Documents\Project\googleplay_crawl\set\gplay_url.txt", "rb")
         #获取url并且去除“”
         # url = linecache.getline(r'F:\Documents\Project\googleplay_crawl\set\gplay_url.txt',10)
-        urls = []
-        with open('F:\Documents\Project\googleplay_crawl\set\package_url.txt') as rfile:
-            for f in rfile:
-                url = 'https://play.google.com/store/apps/details?id='+ f.strip()
-                urls.append(url)
+        # urls = []
+        # with open('F:\Documents\Project\googleplay_crawl\set\package_url.txt') as rfile:
+        #     for f in rfile:
+        #         url = 'https://play.google.com/store/apps/details?id='+ f.strip()
+        #         urls.append(url)
+        db = MySQLdb.connect("localhost", "root", "", "gplay", charset='utf8' )
+        cursor = db.cursor()
+        sql = "select * from gplay_app"
+        cursor.execute(sql)
+        data = cursor.fetchall()
 
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse_app)
+        for ele in range(281, 4980):
+            if(len(data[ele][12]) <= 0):
+                # yield scrapy.Request(url=ele[0], callback=self.parse_app)
+                yield scrapy.Request(url='https://play.google.com/store/apps/details?id='+data[ele][0].strip(), callback=self.parse_update_permission)
+            else:
+                pass
 
 
     def parse_app(self, response):
@@ -100,8 +109,10 @@ class GoogleSpider(CrawlSpider):
             rating['two_star'] = "0"
         if(len(ratings) > 4):
             rating['one_star'] = ratings[4]
+        else:
             rating['one_star'] = "0"
         rating["total_rating"] = response.xpath('//span[@aria-label]/text()').extract()
+
         if(len(rating['total_rating'])>0):
             rating['total_rating'] = rating['total_rating'][0]
         else:
@@ -115,14 +126,14 @@ class GoogleSpider(CrawlSpider):
                 next = self.driver.find_element_by_xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"]//a[@jsname="Hly47e"]')
                 next.click()
                 time.sleep(3)
-                next_list = next.find_elements_by_xpath('//div[@class="fnLizd"]//li')
-                # print(len(next_list))
+                next_list = next.find_elements_by_xpath('//div[@class="fnLizd"]//span')
+                # print(next_list[0])
                 for element in next_list:
                     # print(element.text)
                     permission_set.add(element.text)
                 break
             except NoSuchElementException:
-                return
+                permission_set = ""
         permission = list(permission_set)
 
 
@@ -243,6 +254,36 @@ class GoogleSpider(CrawlSpider):
         #     f.write(url + '\n')
         yield item
 
+
+    def parse_update_permission(self, response):
+        item = GoogleItem()
+        url = response.url
+        self.driver.get(url)
+        url = urlparse.urlparse(url).query.split('&')[0].split('=')[-1]
+
+        # 获取权限
+        permission_set = set()
+        while True:
+            try:
+                next = self.driver.find_element_by_xpath('//*[@id="fcxH9b"]//div[@class="hAyfc"]//a[@jsname="Hly47e"]')
+                next.click()
+                time.sleep(3)
+                next_list = next.find_elements_by_xpath('//div[@class="fnLizd"]//span')
+                # print(next_list[0])
+                for element in next_list:
+                    # print(element.text)
+                    permission_set.add(element.text)
+                break
+            except NoSuchElementException:
+                permission_set = ""
+        permission = list(permission_set)
+
+        item['url'] = url
+        item["authority"]=""
+        if len(permission):
+            for per in permission:
+                item["authority"]=item["authority"]+per+";"
+        yield item
 
 
 

@@ -30,10 +30,15 @@ class GooglecrawlPipeline(object):
 		self.dbpool = dbpool
 
 	def process_item(self, item, spider):
-		query=self.dbpool.runInteraction(self._conditional_insert,item)
+		# query=self.dbpool.runInteraction(self._conditional_insert,item)
+		query=self.dbpool.runInteraction(self._conditional_update, item)
 		query.addErrback(self._handle_error,item,spider)
 		return item
 
+
+	def _conditional_update(self, tx, item):
+		sql = "update `gplay_app` set `permissions` = '%s' where `url_id` = '%s'" %(item['authority'],item['url'])
+		tx.execute(sql)
 
 	def _conditional_insert(self,tx,item):
 		#print item['name']

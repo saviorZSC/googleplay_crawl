@@ -12,13 +12,12 @@ class LanguageLinkExtractor(LxmlLinkExtractor):
     @staticmethod
     def addParams(url):
         if url.find('?') >= 0:
-            return url+'&hl=en';
+            return url+'&hl=en'
         else:
-            return url +'?hl=en';
-
+            return url +'?hl=en'
 
     def extract_links(self, response):
-        links = LxmlLinkExtractor.extract_links(self, response);
+        links = LxmlLinkExtractor.extract_links(self, response)
         for x in links:
             x.url = LanguageLinkExtractor.addParams(x.url)
         # links = super(LxmlLinkExtractor, self).extract_links(response);

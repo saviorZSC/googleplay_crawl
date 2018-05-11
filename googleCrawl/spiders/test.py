@@ -15,3 +15,16 @@
 # driver.get('https://play.google.com/store/apps')
 #
 #
+import MySQLdb
+import MySQLdb.cursors
+
+db = MySQLdb.connect("localhost", "root", "", "gplay", charset='utf8' )
+cursor = db.cursor()
+sql = "select `url_id` from `gplay_app` where  `categories` = 'Food & Drink'"
+cursor.execute(sql)
+data = cursor.fetchall()
+
+file = open("F:\Documents\Project\googleplay_crawl\set\url_Food_Drink.txt", "a")
+
+for url in data:
+    file.write(url[0] + '\n')
