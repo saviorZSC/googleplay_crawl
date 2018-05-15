@@ -11,6 +11,7 @@ from twisted.enterprise import adbapi
 
 
 class GooglecrawlPipeline(object):
+<<<<<<< f1a33db81b6fe945df591eba0e81122d72b61958
 
 	@classmethod
 	def from_settings(cls,settings):
@@ -59,3 +60,24 @@ class GooglecrawlPipeline(object):
 
 	def _handle_error(self, failue, item, spider):
 		print failue#             return item
+=======
+    # print 11111111111
+    def process_item(self, item, spider):
+
+        # fp = open('F:\PROJECT\googleCrawl\googleCrawl\package_'+item['categories']+'.txt', 'a+')
+        # fp.write(item['url'] + '\n')
+        return item
+from scrapy.exceptions import DropItem
+
+# class DuplicatesPipeline(object):
+#
+#     def __init__(self):
+#         self.ids_seen = set() #注意到set型数据的应用
+#
+#     def process_item(self, item, spider):
+#         if item['id'] in self.ids_seen:
+#             raise DropItem("Duplicate item found: %s" % item)
+#         else:
+#             self.ids_seen.add(item['id'])
+#             return item
+>>>>>>> app data crawl
